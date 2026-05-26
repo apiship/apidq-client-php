@@ -22,7 +22,7 @@ class Name extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/clean/name'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/clean/name'),
                 $cleanRequest,
             ),
             CleanResponse::class
@@ -40,7 +40,7 @@ class Name extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/suggest/name'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/suggest/name'),
                 $suggestRequest,
             ),
             SuggestResponse::class
