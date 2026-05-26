@@ -20,7 +20,7 @@ class Phone extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/clean/phone'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/clean/phone'),
                 $cleanRequest,
             ),
             CleanResponse::class

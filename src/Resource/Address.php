@@ -31,7 +31,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/clean/address'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/clean/address'),
                 $cleanRequest,
             ),
             CleanResponse::class
@@ -47,7 +47,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/clean/house'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/clean/house'),
                 $cleanHouseRequest
             ),
             CleanHouseResponse::class
@@ -65,7 +65,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/clean/address/iqdq'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/clean/address/iqdq'),
                 $cleanRequest,
             ),
             CleanIqdqResponse::class
@@ -83,7 +83,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/suggest/address'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/suggest/address'),
                 $suggestRequest,
             ),
             SuggestResponse::class
@@ -99,7 +99,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/idsearch/address'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/idsearch/address'),
                 $idSearchRequest
             ),
             IdSearchResponse::class
@@ -111,7 +111,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/idsearch/address/center'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/idsearch/address/center'),
                 $idSearchCenterRequest
             ),
             IdSearchCenterResponse::class
@@ -127,7 +127,7 @@ class Address extends AbstractResource
         return $this->send(
             $this->createRequest(
                 'POST',
-                $this->uri->withPath('/v1/geosearch/address'),
+                $this->uri->withPath($this->uri->getPath() . '/v1/geosearch/address'),
                 $geoSearchRequest
             ),
             GeoSearchResponse::class
